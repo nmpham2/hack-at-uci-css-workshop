@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body, html {
+    /*  
+        We are centering our entire page content and making sure it 
+        expands to the full width and height of our window. 
+    */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +16,10 @@ body, html {
 }
 
 main {
+    /*
+        This is editing the content of our main container. We are adding
+        a font and centering the rest of our content. 
+    */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +28,10 @@ main {
 }
 
 h1 {
+    /*
+        This is our title styline, we are changing the color, font weight
+        and size.
+    */
     color: #71AAA4;
     font-style: normal;
     font-weight: 800;
@@ -28,17 +40,30 @@ h1 {
 }
 
 .cards-container {
+    /*
+        This container holds our 3 cards and makes sure they are spaced evenly
+        in a row.
+    */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .default-card {
+    /*
+        We have 2 different styles for our cards, a dark mode and a light mode. 
+        I am defining default stying, but we can see that some of these styles
+        are getting applied to both the dark and light one (although we can see
+        that the light one has different font and background colors).
+    */
     border-radius: 10px;
     background-color: #272727;
     padding: 20px;
     width: 25%;
 
+    /*
+        This is where our default box shadowing (without hover).
+    */
     box-shadow:
         10px -10px 0 -3px #EFEFEF,
         10px -10px,
@@ -50,6 +75,10 @@ h1 {
 }
 
 .default-card:hover {
+    /*
+        When we do hover, our box shadow "goes away" (it actually just moves
+        to line up with our regular div.
+    */
     top: -20px;
     left: 20px;
     box-shadow: 
@@ -60,6 +89,9 @@ h1 {
 }
 
 .default-card h2 {
+    /*
+        Heading 2 styling for our cards.
+    */
     color: white;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -69,6 +101,9 @@ h1 {
 }
 
 .default-card p {
+    /*
+        Paragraph styling for our cards.
+    */
     color: white;
     font-style: normal;
     font-weight: 600;
@@ -76,6 +111,9 @@ h1 {
 }
 
 .default-card ul {
+    /*
+        Our list styling.
+    */
     color: #AED2CF;
     font-style: normal;
     font-weight: 600;
@@ -83,13 +121,22 @@ h1 {
 }
 
 #special-card {
+    /*
+        We are overriding our default-card background-color through
+        our more specific id.
+    */
     background-color: #FFFFFF;
 }
 
 #special-card p, #special-card h2 {
+    /*
+        We are overriding our paragraph and h2 styling through a 
+        more specific id.
+    */
     color: black;
 }
 
+/* This is how we define animations! We can use different "stages" of time. */
 @keyframes blinking {
     0% { opacity: 100% }
     50% { opacity: 25% }
